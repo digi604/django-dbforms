@@ -1,0 +1,9 @@
+Folgendes Formular wurde von der Website {{ site.name }} abgesendet:
+
+Formularname: {{ contact_form.name }}
+-------------
+{{ form_url }}
+
+{{ rows }}
+
+Technology by Divio GmbH

@@ -1,0 +1,19 @@
+{% load i18n uni_form %}
+<div class="box form"> 
+	<div class="textcontent">    
+    	<h4>{{ contact_form.name }}</h4>
+    {% if not success %}
+    	<p>{{ contact_form.description }}</p>
+	</div>		
+    <form id="{{ contact_form.name|slugify }}" action="" method="post" enctype="multipart/form-data">
+        {{ form_instance|as_uni_form }}
+        <fieldset>
+            <input class="submit" type="submit" value="{% trans 'submit' %}" name="{% trans 'submit' %}" />
+            <input class="hidden" type="hidden" name="contactform_id" value="{{ contact_form.id }}"/>
+        </fieldset>
+    </form>
+    {% else %}
+        <p>{{ success|linebreaks }}</p>
+    </div>
+    {% endif %}
+</div>

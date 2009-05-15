@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: contactform\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-05 16:34+0100\n"
+"PO-Revision-Date: 2009-03-06 17:53\n"
+"Last-Translator: <>\n"
+"Language-Team: Divio <maik.lustenberger@divio.ch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Country: SWITZERLAND\n"
+"X-Poedit-Language: German\n"
+"X-Translated-Using: django-rosetta 0.4.0\n"
+
+#: cms_plugins.py:17
+msgid "Contact Form"
+msgstr "Kontaktformular"
+
+#: cms_plugins.py:42 views.py:27
+#, python-format
+msgid "[%s] Contact form sent"
+msgstr "[%s] Kontaktformular abgesendet"
+
+#: cms_plugins.py:50 views.py:35
+msgid "yes"
+msgstr "ja"
+
+#: cms_plugins.py:50 views.py:35
+msgid "no"
+msgstr "nein"
+
+#: cms_plugins.py:77 views.py:62
+msgid "Your request has been submitted. We will process it as soon as possible."
+msgstr "Ihre Anfrage wurde gesendet. Wir werden diese so schnell wie möglich bearbeiten."
+
+#: models.py:19
+msgid "language"
+msgstr "sprache"
+
+#: models.py:20
+msgid "name"
+msgstr "Name"
+
+#: models.py:21
+msgid "description"
+msgstr "Beschreibung"
+
+#: models.py:22
+msgid "success message"
+msgstr "Erfolgsmeldung"
+
+#: models.py:23 models.py:97
+msgid "recipients"
+msgstr "Empfänger"
+
+#: models.py:24
+msgid "CC to managers"
+msgstr "CC zu Managern"
+
+#: models.py:24
+#, python-format
+msgid "Check to send a copy to the site managers (%s)."
+msgstr "Aktivieren um eine Kopie der Anfrage an die Site-Manager (%s) zu senden."
+
+#: models.py:25
+msgid "CC to site contact"
+msgstr "CC zu Site-Kontakt"
+
+#: models.py:25
+#, python-format
+msgid "Check to send a copy to the site contact (%s)."
+msgstr "Aktivieren um eine Kopie der Anfrage an die Site-Kontakt (%s) zu senden."
+
+#: models.py:47
+msgid "contact form"
+msgstr "Kontaktformular"
+
+#: models.py:48
+msgid "contact forms"
+msgstr "Kontaktformulare"
+
+#: models.py:52
+msgid "character field"
+msgstr "Zeichen Feld"
+
+#: models.py:53
+msgid "email field"
+msgstr "E-Mail Feld"
+
+#: models.py:55
+msgid "checkbox"
+msgstr "Checkbox"
+
+#: models.py:56
+msgid "file field"
+msgstr "Datei Feld"
+
+#: models.py:63
+msgid "textarea"
+msgstr "Textarea"
+
+#: models.py:64
+msgid "password input"
+msgstr "Passworteingabe"
+
+#: models.py:96
+msgid "recipient"
+msgstr "Empfänger"
+
+#: templates/admin/contactform/contactformsubmission/change_list.html:6
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)s hinzufügen"
+
+#: templates/admin/contactform/contactformsubmission/change_list.html:8
+msgid "Export CSV"
+msgstr "CSV exportieren"
+
+#: templates/contactform/form.html:11
+msgid "submit"
+msgstr "absenden"
