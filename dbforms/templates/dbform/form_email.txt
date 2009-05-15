@@ -6,4 +6,3 @@ Formularname: {{ contact_form.name }}
 
 {{ rows }}
 
-Technology by Divio GmbH
