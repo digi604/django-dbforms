@@ -4,7 +4,7 @@ from django.utils.safestring import mark_safe
 
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
-from contactform.models import ContactFormIntermediate, ContactFormSubmission
+from dbforms.models import ContactFormIntermediate, FormSubmission
 from django.template.context import Context
 from django.template.defaultfilters import slugify, yesno
 from django.contrib.sites.models import Site
@@ -17,8 +17,8 @@ class ContactFormPlugin(CMSPluginBase):
     model = ContactFormIntermediate
     name = _("Contact Form")
     placeholders = ("content",)
-    render_template = "contactform/form.html"
-    form_template = "contactform/plugin_form.html"
+    render_template = "dbform/form.html"
+    form_template = "dbform/plugin_form.html"
     
     def render(self, context, instance, placeholder):
         request = context['request']
@@ -72,7 +72,7 @@ class ContactFormPlugin(CMSPluginBase):
                     'sender_ip': request.META['REMOTE_ADDR'],
                     'form_url': request.build_absolute_uri(),
                 }, autoescape=False)
-                text_template = loader.get_template('contactform/form_email.txt')
+                text_template = loader.get_template('dbform/form_email.txt')
                 text_content = text_template.render(message_context)
                 recipient_list = [recipient['email'] for recipient in contact_form.recipients.values('email')]
                 bcc = []
@@ -89,7 +89,7 @@ class ContactFormPlugin(CMSPluginBase):
                     'success': mark_safe(contact_form.success_message.strip() or _("Your request has been submitted. We will process it as soon as possible.")),
                 })
                 # save message to db for later reference
-                submission = ContactFormSubmission(
+                submission = FormSubmission(
                                 form=contact_form,
                                 sender_ip=request.META['REMOTE_ADDR'],
                                 form_url=request.build_absolute_uri(),
